@@ -1,0 +1,127 @@
+/* 공통 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    background-color: #f4dddd;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+  }
+  
+  .month-selector {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin: 20px auto;
+    max-width: 500px;
+    font-size: 12px;
+  }
+  
+  .calendar-header {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .day {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  .day:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .day.selected {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .handover-table {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 40px;
+    resize: none;
+    overflow: hidden;
+  }
+  
+  textarea::placeholder {
+    color: gray;
+    font-style: italic;
+  }
+  
+  .actions {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .actions button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #218838;
+  }
+  
+  /* 만든사람 표시 */
+  .credits {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 20px;
+    color: gray;
+  }
+  
+  /* 프린트 시 숨기기 */
+  @media print {
+    #calendar, .month-selector, .actions, .credits {
+      display: none;
+    }
+  }

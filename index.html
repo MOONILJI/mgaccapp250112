@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지역거주실 업무인수인계</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <h1>지역거주실 업무인수인계</h1>
+
+  <!-- 월 선택 -->
+  <div class="month-selector">
+    <button id="prevMonth">이전 월</button>
+    <span id="currentMonth"></span>
+    <button id="nextMonth">다음 월</button>
+  </div>
+
+  <!-- 달력 -->
+  <div id="calendar"></div>
+
+  <!-- 선택된 날짜 표시 -->
+  <h2 id="selectedDateHeader">선택된 날짜: 날짜를 선택해주세요</h2>
+
+  <!-- 업무 인수인계 테이블 -->
+  <div class="handover-table">
+    <table>
+      <thead>
+        <tr>
+          <th>항목</th>
+          <th>인계 내용</th>
+          <th>작성자</th>
+        </tr>
+      </thead>
+      <tbody id="handoverTable"></tbody>
+    </table>
+  </div>
+
+  <!-- 버튼 -->
+  <div class="actions">
+    <button id="downloadExcel">엑셀로 다운받기</button>
+    <button id="printPage">프린트 인쇄</button>
+  </div>
+
+  <!-- 만든사람 표시 -->
+  <footer class="credits">
+    만든사람: 문일지(지역거주실)
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
